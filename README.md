@@ -35,4 +35,6 @@ To run the server, first copy the 'lists' directly into the new "build_dir\Serve
     ./unoff -C
     ./unoff -S
 ```
-Change your server.lsts file in your ~.olc to point to 127.0.0.1 or <your IP>.
+Change your server.lsts file in your ~.olc to point to 127.0.0.1 or Your IP.
+
+If you want to know more/need some help with setting this up, message PandemiC on OL/Forums.
