@@ -1,68 +1,89 @@
-
 find_package(LibEV REQUIRED)
 find_package(SQLite3 REQUIRED)
 
 set(DB_SRC
+    db/database_functions.c
+    db/database_functions.h
     db/db_attribute_tbl.c
     db/db_attribute_tbl.h
+    db/db_boat_tbl.c
+    db/db_boat_tbl.h
     db/db_character_tbl.c
     db/db_character_tbl.h
     db/db_character_race_tbl.c
     db/db_character_race_tbl.h
-    db/db_character_inventory_tbl.c
-    db/db_character_inventory_tbl.h
     db/db_character_type_tbl.c
-    db/db_chat_channel_tbl.c
-    db/db_game_data_tbl.c
-    db/db_gender_tbl.c
-    db/db_map_tbl.c
-    db/db_season_tbl.c
     db/db_character_type_tbl.h
+    db/db_chat_channel_tbl.c
     db/db_chat_channel_tbl.h
+    db/db_e3d_tbl.c
+    db/db_e3d_tbl.h
+    db/db_game_data_tbl.c
     db/db_game_data_tbl.h
+    db/db_gender_tbl.c
     db/db_gender_tbl.h
+    db/db_guild_tbl.c
+    db/db_guild_tbl.h
+    db/db_map_tbl.c
     db/db_map_tbl.h
-    db/db_object_tbl.h
+    db/db_map_object_tbl.c
+    db/db_map_object_tbl.h
+    db/db_npc_action_tbl.c
+    db/db_npc_action_tbl.h
+    db/db_npc_trigger_tbl.c
+    db/db_npc_trigger_tbl.h
     db/db_object_tbl.c
+    db/db_object_tbl.h
+    db/db_season_tbl.c
     db/db_season_tbl.h
-
-    db/db_upgrade.h
+    db/db_skill_tbl.c
+    db/db_skill_tbl.h
+    db/db_sqlite_return_codes.c
+    db/db_sqlite_return_codes.h
     db/db_upgrade.c
+    db/db_upgrade.h
 
-    db/database_functions.c
-    db/database_functions.h
 )
 set(SRC
     attributes.c
-    broadcast_actor_functions.c
+    bags.c
+    boats.c
     character_creation.c
     character_inventory.c
     character_movement.c
     character_race.c
     characters.c
+    character_skill.c
     character_type.c
     chat.c
     client_protocol_handler.c
     clients.c
     date_time_functions.c
+    e3d.c
     file_functions.c
     game_data.c
+    game_time.c
     gender.c
     guilds.c
     harvesting.c
     hash_commands.c
+    hash_commands_chat.c
+    hash_commands_devs.c
+    hash_commands_ops.c
+    hash_commands_guilds.c
     idle_buffer2.cpp
-    items.c
-    initialise_server.c
     logging.c
     log_in.c
     main.c
-    map_objects.c
+    map_object.c
     maps.c
     movement.c
+    npc.c
     numeric_functions.c
+    objects.c
     packet.c
     pathfinding.c
+    seasons.c
     server_messaging.c
     server_protocol_functions.c
     server_start_stop.c
@@ -70,13 +91,14 @@ set(SRC
 )
 set(INCLUDES
     attributes.h
-    broadcast_actor_functions.h
+    bags.h
+    boats.h
+    character_creation.h
     character_inventory.h
     character_movement.h
     character_race.h
-    character_race_tbl.h
-
     characters.h
+    character_skill.h
     character_type.h
     chat.h
     client_protocol.h
@@ -84,23 +106,28 @@ set(INCLUDES
     clients.h
     colour.h
     date_time_functions.h
+    e3d.h
     file_functions.h
     game_data.h
     gender.h
     global.h
+    harvesting.h
     hash_commands.h
-    idle_buffer.h
-    initialise_server.h
-    items.h
+    hash_commands_chat.h
+    hash_commands_devs.h
+    hash_commands_ops.h
+    hash_commands_guilds.h
+    idle_buffer2.h
     logging.h
     log_in.h
     maps.h
-    map_objects.h
+    map_object.h
     movement.h
     numeric_functions.h
     pathfinding.h
     packet.h
     season.h
+    server_build_details.h
     server_messaging.h
     server_parameters.h
     server_protocol_functions.h
