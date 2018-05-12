@@ -56,6 +56,7 @@ set(SRC
     character_skill.c
     character_type.c
     chat.c
+    colour.c
     client_protocol_handler.c
     clients.c
     date_time_functions.c
