@@ -20,14 +20,14 @@
 	along with unoff_server_4.  If not, see <http://www.gnu.org/licenses/>.
 *******************************************************************************************************************/
 
-#define NPC_ACTION_TABLE_SQL "CREATE TABL E NPC_ACTION_TABLE( \
+#define NPC_ACTION_TABLE_SQL "CREATE TABLE NPC_ACTION_TABLE( \
         NPC_ACTION_ID          INTEGER PRIMARY KEY     NOT NULL, \
         ACTION_TYPE            INT, \
         NPC_TEXT               TEXT, \
         OPTIONS_LIST           TEXT, \
         TEXT_SUCCESS           TEXT, \
         TEXT_FAIL              TEXT, \
-        CHOICE                 INT
+        CHOICE                 INT, \
         OBJECT_ID_REQUIRED     INT, \
         OBJECT_AMOUNT_REQUIRED INT, \
         OBJECT_ID_GIVEN        INT, \
