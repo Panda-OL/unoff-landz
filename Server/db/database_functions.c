@@ -35,7 +35,7 @@
 #include "db_e3d_tbl.h"
 #include "db_map_object_tbl.h"
 #include "db_npc_trigger_tbl.h"
-#include "db_npc_action_tbl.h
+#include "db_npc_action_tbl.h"
 #include "db_guild_tbl.h"
 #include "db_skill_tbl.h"
 #include "db_upgrade.h"
