@@ -19,8 +19,8 @@
 #ifndef SERVER_BUILD_DETAILS_H_INCLUDED
 #define SERVER_BUILD_DETAILS_H_INCLUDED
 
-#define VERSION "UnoffLandz 4"
-#define BUILD "12"
+#define VERSION "Panda Landz Build 1 (UnoffLandz 4)"
+#define BUILD "12.1"
 #define BUILD_DATE __DATE__
 
 /***************************************************************************************************
