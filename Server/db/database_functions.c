@@ -34,6 +34,8 @@
 #include "db_object_tbl.h"
 #include "db_e3d_tbl.h"
 #include "db_map_object_tbl.h"
+#include "db_npc_trigger_tbl.h"
+#include "db_npc_action_tbl.h
 #include "db_guild_tbl.h"
 #include "db_skill_tbl.h"
 #include "db_upgrade.h"
@@ -51,6 +53,7 @@
 #include "../string_functions.h"
 #include "../gender.h"
 #include "../maps.h"
+#include "../npc.h"
 #include "../objects.h"
 #include "../e3d.h"
 #include "../character_type.h"
@@ -441,6 +444,8 @@ void populate_database(const char *db_filename){
     create_database_table(MAP_OBJECT_TABLE_SQL);
     create_database_table(GUILD_TABLE_SQL);
     create_database_table(SKILL_TABLE_SQL);
+    create_database_table(NPC_TRIGGER_TABLE_SQL);
+    create_database_table(NPC_ACTION_TABLE_SQL);
 
     // inserts a blank line to create a logical separator with subsequent log entries
     log_text(EVENT_INITIALISATION, "");
